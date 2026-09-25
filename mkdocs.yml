@@ -1,0 +1,633 @@
+site_name: System Monitor
+site_url: https://systemmonitor.motionapplied.com/
+repo_url: https://github.com/motionapplied/SystemMonitor.Site
+edit_uri: edit/main/docs/
+docs_dir: 'docs'
+site_description: 'Documentation for Motion Applied System Monitor: ECU configuration, calibration, tuning, data logging and the System Monitor developer APIs.'
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  logo: assets/swoosh/motion_applied_logo_white.svg
+  favicon: assets/swoosh/motion_applied_logo.svg
+  features:
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: >
+  Copyright &copy; 2026 Motion Applied Ltd. -
+  <a href="#__consent">Change cookie settings</a>
+
+nav:
+- Introduction:
+  - Introduction: index.md
+  - How to use Help: introduction/how-to-use-help.md
+- Getting Started:
+  - getting-started/index.md
+  - Installation: getting-started/installation.md
+  - Custom Installation: getting-started/custom-installation.md
+  - Licensing:
+    - getting-started/licensing/index.md
+    - Licence Checking: getting-started/licensing/licence-checking.md
+    - Adding a Licence: getting-started/licensing/adding-a-licence.md
+  - Team Security and Reduced Data Access:
+    - Team Security: getting-started/team-security-and-reduced-data-access/team-security.md
+    - Reduced Data Access: getting-started/team-security-and-reduced-data-access/reduced-data-access.md
+- Project Management:
+  - project-management/index.md
+  - Applications: project-management/applications.md
+  - Active Application: project-management/active-application.md
+  - ASAP Compatibility: project-management/asap-compatibility.md
+  - Customer Bases:
+    - project-management/customer-bases/index.md
+    - Multi-Application Base: project-management/customer-bases/multi-application-base.md
+    - Free User: project-management/customer-bases/free-user.md
+    - Adding and Editing Customer Bases: project-management/customer-bases/adding-and-editing-customer-bases.md
+    - Customer Base Advanced Settings: project-management/customer-bases/customer-base-advanced-settings.md
+    - Adding and Editing Multi-Application Bases: project-management/customer-bases/adding-and-editing-multi-application-bases.md
+  - Unit.Def Management:
+    - Introduction: project-management/unit-def-management/introduction.md
+    - File Management: project-management/unit-def-management/file-management.md
+    - Project Management: project-management/unit-def-management/project-management.md
+    - PGV Creation: project-management/unit-def-management/pgv-creation.md
+    - Project Import: project-management/unit-def-management/project-import.md
+  - Program and Data Versions:
+    - project-management/program-and-data-versions/index.md
+    - Creating a Program Version: project-management/program-and-data-versions/creating-a-program-version.md
+    - Creating a Program Version - Command Line: project-management/program-and-data-versions/creating-a-program-version-command-line.md
+  - Projects:
+    - project-management/projects/index.md
+    - Opening a Project: project-management/projects/opening-a-project.md
+    - Closing a Project: project-management/projects/closing-a-project.md
+    - Creating a Project:
+      - Stage 1 - Define Project: project-management/projects/creating-a-project/stage-1-define-project.md
+      - Stage 2 - Connections: project-management/projects/creating-a-project/stage-2-connections.md
+      - Stage 3 - Define a Desktop: project-management/projects/creating-a-project/stage-3-define-a-desktop.md
+      - Stage 4 - Program Version: project-management/projects/creating-a-project/stage-4-program-version.md
+      - Car Definition: project-management/projects/creating-a-project/car-definition.md
+      - Spare Car: project-management/projects/creating-a-project/spare-car.md
+    - Properties:
+      - project-management/projects/properties/index.md
+      - Connections: project-management/projects/properties/connections.md
+      - Project Properties: project-management/projects/properties/project-properties.md
+      - Application Properties:
+        - project-management/projects/properties/application-properties/index.md
+        - Application Properties - Program Version tab: project-management/projects/properties/application-properties/application-properties-program-version-tab.md
+        - Application Properties - Data Version tab: project-management/projects/properties/application-properties/application-properties-data-version-tab.md
+        - Application Properties - Memory Layout: project-management/projects/properties/application-properties/application-properties-memory-layout.md
+        - Application Properties - Unlock List Management: project-management/projects/properties/application-properties/application-properties-unlock-list-management.md
+  - Developing Data Versions:
+    - project-management/developing-data-versions/index.md
+    - Using Data Version Files: project-management/developing-data-versions/using-data-version-files.md
+    - Export to MatLab: project-management/developing-data-versions/export-to-matlab.md
+    - Importing Hex Files: project-management/developing-data-versions/importing-hex-files.md
+  - Data Wizard:
+    - project-management/data-wizard/index.md
+    - Compare/Merge Tool: project-management/data-wizard/compare-merge-tool.md
+    - Compare/Merge Tool Features: project-management/data-wizard/compare-merge-tool-features.md
+    - Map Compare Window: project-management/data-wizard/map-compare-window.md
+    - Map Compare Window Features: project-management/data-wizard/map-compare-window-features.md
+    - Data Wizard - Candidate Version: project-management/data-wizard/data-wizard-candidate-version.md
+    - Data Wizard - Report View: project-management/data-wizard/data-wizard-report-view.md
+    - Data Wizard - Parameter Masking: project-management/data-wizard/data-wizard-parameter-masking.md
+    - Data Wizard - Selecting Parameters: project-management/data-wizard/data-wizard-selecting-parameters.md
+    - Data Wizard - Compare: project-management/data-wizard/data-wizard-compare.md
+    - Data Wizard - Merge: project-management/data-wizard/data-wizard-merge.md
+    - Data Wizard - View Parameter: project-management/data-wizard/data-wizard-view-parameter.md
+    - Data Wizard - Window Menu: project-management/data-wizard/data-wizard-window-menu.md
+  - Files:
+    - project-management/files/index.md
+    - Creating New Files: project-management/files/creating-new-files.md
+    - Opening Files: project-management/files/opening-files.md
+    - Saving Files: project-management/files/saving-files.md
+    - File Type Selection: project-management/files/file-type-selection.md
+    - Exporting Files: project-management/files/exporting-files.md
+    - Importing Files: project-management/files/importing-files.md
+    - Types of Files:
+      - ECU Files: project-management/files/types-of-files/ecu-files.md
+      - Program and Data Version Files: project-management/files/types-of-files/program-and-data-version-files.md
+      - Project Files: project-management/files/types-of-files/project-files.md
+- Using System Monitor:
+  - using-system-monitor/index.md
+  - Main Window: using-system-monitor/main-window.md
+  - Menus:
+    - using-system-monitor/menus/index.md
+    - File Menu: using-system-monitor/menus/file-menu.md
+    - Edit Menu: using-system-monitor/menus/edit-menu.md
+    - View Menu: using-system-monitor/menus/view-menu.md
+    - ECU Menu: using-system-monitor/menus/ecu-menu.md
+    - Sensors Menu: using-system-monitor/menus/sensors-menu.md
+    - Logging Menu: using-system-monitor/menus/logging-menu.md
+    - Tools Menu: using-system-monitor/menus/tools-menu.md
+    - Data Wizard Menu: using-system-monitor/menus/data-wizard-menu.md
+    - Desktop Menu: using-system-monitor/menus/desktop-menu.md
+    - Help Menu: using-system-monitor/menus/help-menu.md
+    - Window System Menu: using-system-monitor/menus/window-system-menu.md
+    - Context Menus:
+      - using-system-monitor/menus/context-menus/index.md
+      - Edit Context Menu: using-system-monitor/menus/context-menus/edit-context-menu.md
+      - Windows Context Menu: using-system-monitor/menus/context-menus/windows-context-menu.md
+      - Data Wizard Context Menu: using-system-monitor/menus/context-menus/data-wizard-context-menu.md
+      - Select Parameter Context Menu: using-system-monitor/menus/context-menus/select-parameter-context-menu.md
+      - Parameter Explorer Context Menu: using-system-monitor/menus/context-menus/parameter-explorer-context-menu.md
+      - Bar Graph Context Menu: using-system-monitor/menus/context-menus/bar-graph-context-menu.md
+      - Oscilloscope Context Menu: using-system-monitor/menus/context-menus/oscilloscope-context-menu.md
+      - Grid Cell Context Menu: using-system-monitor/menus/context-menus/grid-cell-context-menu.md
+      - Tool Bar Context Menu: using-system-monitor/menus/context-menus/tool-bar-context-menu.md
+  - Tool and Information Bars:
+    - using-system-monitor/tool-and-information-bars/index.md
+    - Standard Tool Bar: using-system-monitor/tool-and-information-bars/standard-tool-bar.md
+    - ECU Bar: using-system-monitor/tool-and-information-bars/ecu-bar.md
+    - Maths Bar: using-system-monitor/tool-and-information-bars/maths-bar.md
+    - Map Bar: using-system-monitor/tool-and-information-bars/map-bar.md
+    - Comms Bar: using-system-monitor/tool-and-information-bars/comms-bar.md
+    - Extended Comms Bar: using-system-monitor/tool-and-information-bars/extended-comms-bar.md
+    - Notes Bar: using-system-monitor/tool-and-information-bars/notes-bar.md
+    - Status Bar: using-system-monitor/tool-and-information-bars/status-bar.md
+  - Keyboard Operation: using-system-monitor/keyboard-operation.md
+  - Desktop:
+    - using-system-monitor/desktop/index.md
+    - Desktop Files: using-system-monitor/desktop/desktop-files.md
+    - Merging Desktops: using-system-monitor/desktop/merging-desktops.md
+    - Fonts: using-system-monitor/desktop/fonts.md
+  - Pages:
+    - using-system-monitor/pages/index.md
+    - Page Properties: using-system-monitor/pages/page-properties.md
+  - Windows:
+    - using-system-monitor/windows/index.md
+    - Edit Windows: using-system-monitor/windows/edit-windows.md
+    - Measurement Windows: using-system-monitor/windows/measurement-windows.md
+    - Creating Windows:
+      - using-system-monitor/windows/creating-windows/index.md
+      - Creating Empty Windows: using-system-monitor/windows/creating-windows/creating-empty-windows.md
+      - Creating Windows with Parameter Explorer: using-system-monitor/windows/creating-windows/creating-windows-with-parameter-explorer.md
+    - Using Windows:
+      - using-system-monitor/windows/using-windows/index.md
+      - Columns in Tabular Windows: using-system-monitor/windows/using-windows/columns-in-tabular-windows.md
+      - Window Properties: using-system-monitor/windows/using-windows/window-properties.md
+      - Window Properties - Display tab: using-system-monitor/windows/using-windows/window-properties-display-tab.md
+  - Parameters:
+    - using-system-monitor/parameters/index.md
+    - Editable Parameters: using-system-monitor/parameters/editable-parameters.md
+    - Measurement Parameters: using-system-monitor/parameters/measurement-parameters.md
+    - Names, Descriptions and Groups: using-system-monitor/parameters/names-descriptions-and-groups.md
+    - Parameter Explorer: using-system-monitor/parameters/parameter-explorer.md
+    - Moving Parameter Explorer: using-system-monitor/parameters/moving-parameter-explorer.md
+    - Parameter Symbols: using-system-monitor/parameters/parameter-symbols.md
+    - Locked Parameters:
+      - About the Parameter Unlock List: using-system-monitor/parameters/locked-parameters/about-the-parameter-unlock-list.md
+      - Locked Parameters: using-system-monitor/parameters/locked-parameters/locked-parameters.md
+      - Edit the Parameter Unlock List: using-system-monitor/parameters/locked-parameters/edit-the-parameter-unlock-list.md
+    - Virtual Parameters:
+      - using-system-monitor/parameters/virtual-parameters/index.md
+      - Creating a Virtual Parameter: using-system-monitor/parameters/virtual-parameters/creating-a-virtual-parameter.md
+      - Virtual Parameter Files: using-system-monitor/parameters/virtual-parameters/virtual-parameter-files.md
+      - Virtual Parameters XML File Schema: using-system-monitor/parameters/virtual-parameters/virtual-parameters-xml-file-schema.md
+      - Virtual Parameters Import/Export: using-system-monitor/parameters/virtual-parameters/virtual-parameters-import-export.md
+    - Selecting Parameters:
+      - Selecting parameters to Edit or Display: using-system-monitor/parameters/selecting-parameters/selecting-parameters-to-edit-or-display.md
+      - Multiple Parameter Selection - Window Properties: using-system-monitor/parameters/selecting-parameters/multiple-parameter-selection-window-properties.md
+      - Selecting Multiple Parameters: using-system-monitor/parameters/selecting-parameters/selecting-multiple-parameters.md
+      - Single Parameter Selection - Window Properties: using-system-monitor/parameters/selecting-parameters/single-parameter-selection-window-properties.md
+      - Selecting a Single Parameter: using-system-monitor/parameters/selecting-parameters/selecting-a-single-parameter.md
+      - Parameter Filter: using-system-monitor/parameters/selecting-parameters/parameter-filter.md
+    - Parameter Properties:
+      - using-system-monitor/parameters/parameter-properties/index.md
+      - General tab: using-system-monitor/parameters/parameter-properties/general-tab.md
+      - Measurement tab: using-system-monitor/parameters/parameter-properties/measurement-tab.md
+      - Editable tab: using-system-monitor/parameters/parameter-properties/editable-tab.md
+      - 1-Axis Map tab: using-system-monitor/parameters/parameter-properties/1-axis-map-tab.md
+      - 2-Axis Map tab: using-system-monitor/parameters/parameter-properties/2-axis-map-tab.md
+      - Array tab: using-system-monitor/parameters/parameter-properties/array-tab.md
+      - String tab: using-system-monitor/parameters/parameter-properties/string-tab.md
+      - Virtual tab: using-system-monitor/parameters/parameter-properties/virtual-tab.md
+      - Conversion tab: using-system-monitor/parameters/parameter-properties/conversion-tab.md
+      - Display tab: using-system-monitor/parameters/parameter-properties/display-tab.md
+      - Adjustment tab: using-system-monitor/parameters/parameter-properties/adjustment-tab.md
+      - Live Auto Tune tab: using-system-monitor/parameters/parameter-properties/live-auto-tune-tab.md
+      - Number Formats: using-system-monitor/parameters/parameter-properties/number-formats.md
+      - Mathematical Operators: using-system-monitor/parameters/parameter-properties/mathematical-operators.md
+      - Selecting a Colour: using-system-monitor/parameters/parameter-properties/selecting-a-colour.md
+      - Axis Properties:
+        - using-system-monitor/parameters/parameter-properties/axis-properties/index.md
+        - Axis Properties - General: using-system-monitor/parameters/parameter-properties/axis-properties/axis-properties-general.md
+        - Axis Properties - Conversion: using-system-monitor/parameters/parameter-properties/axis-properties/axis-properties-conversion.md
+      - Conversions:
+        - Conversion Properties: using-system-monitor/parameters/parameter-properties/conversions/conversion-properties.md
+        - Rational Conversion: using-system-monitor/parameters/parameter-properties/conversions/rational-conversion.md
+        - Formula Conversion: using-system-monitor/parameters/parameter-properties/conversions/formula-conversion.md
+        - Table Conversion: using-system-monitor/parameters/parameter-properties/conversions/table-conversion.md
+  - Printing:
+    - Printer Support: using-system-monitor/printing/printer-support.md
+    - Printing Data Wizard Windows: using-system-monitor/printing/printing-data-wizard-windows.md
+    - Data Wizard Print Options: using-system-monitor/printing/data-wizard-print-options.md
+    - Print Preview: using-system-monitor/printing/print-preview.md
+  - Settings: using-system-monitor/settings.md
+- Tuning:
+  - tuning/index.md
+  - Scalar Window: tuning/scalar-window.md
+  - 1 axis Map Window:
+    - 1 axis Map: tuning/1-axis-map-window/1-axis-map.md
+    - 1 axis Map - Multiple Parameters: tuning/1-axis-map-window/1-axis-map-multiple-parameters.md
+  - 2 axis Map Window: tuning/2-axis-map-window.md
+  - Array Window: tuning/array-window.md
+  - String Window: tuning/string-window.md
+  - Changing Parameter Values:
+    - tuning/changing-parameter-values/index.md
+    - Parameter Edit Mode: tuning/changing-parameter-values/parameter-edit-mode.md
+    - Changing Parameter Values by Mouse: tuning/changing-parameter-values/changing-parameter-values-by-mouse.md
+    - Changing Parameter Values by Keyboard: tuning/changing-parameter-values/changing-parameter-values-by-keyboard.md
+    - Value Limit Warning: tuning/changing-parameter-values/value-limit-warning.md
+    - Changing Breakpoint Values by Mouse: tuning/changing-parameter-values/changing-breakpoint-values-by-mouse.md
+    - Breakpoint Warning: tuning/changing-parameter-values/breakpoint-warning.md
+    - Breakpoint Monotony: tuning/changing-parameter-values/breakpoint-monotony.md
+  - Graphical Maps:
+    - tuning/graphical-maps/index.md
+    - Graphical View - 1 axis: tuning/graphical-maps/graphical-view-1-axis.md
+    - Graphical View - 2 axis: tuning/graphical-maps/graphical-view-2-axis.md
+    - Difference View: tuning/graphical-maps/difference-view.md
+    - End View: tuning/graphical-maps/end-view.md
+    - Slice View: tuning/graphical-maps/slice-view.md
+    - Zooming a Graphical view: tuning/graphical-maps/zooming-a-graphical-view.md
+    - Breakpoint Spacing: tuning/graphical-maps/breakpoint-spacing.md
+    - Rotating a Graphical view: tuning/graphical-maps/rotating-a-graphical-view.md
+    - Changing Values in a Graphical view: tuning/graphical-maps/changing-values-in-a-graphical-view.md
+  - Adjustment Board Control:
+    - Adjustment Board Configuration: tuning/adjustment-board-control/adjustment-board-configuration.md
+    - Adjustment Board Control: tuning/adjustment-board-control/adjustment-board-control.md
+    - Adjustment Board Keyboard Operation: tuning/adjustment-board-control/adjustment-board-keyboard-operation.md
+    - Pot Board Properties: tuning/adjustment-board-control/pot-board-properties.md
+  - Live Tune: tuning/live-tune.md
+  - Live Auto Tune: tuning/live-auto-tune.md
+- ECU Control:
+  - ecu-control/index.md
+  - Selecting Applications: ecu-control/selecting-applications.md
+  - Setting Time and Date: ecu-control/setting-time-and-date.md
+  - ECU On-Line: ecu-control/ecu-on-line.md
+  - Kill Engine: ecu-control/kill-engine.md
+  - Cursor Control and Trace: ecu-control/cursor-control-and-trace.md
+  - Single Message: ecu-control/single-message.md
+  - ECU Memory:
+    - ecu-control/ecu-memory/index.md
+    - Reprogramming the ECU: ecu-control/ecu-memory/reprogramming-the-ecu.md
+    - Force Complete Reprogram: ecu-control/ecu-memory/force-complete-reprogram.md
+    - Run from ROM: ecu-control/ecu-memory/run-from-rom.md
+    - Run from RAM: ecu-control/ecu-memory/run-from-ram.md
+    - Copy ROM to RAM: ecu-control/ecu-memory/copy-rom-to-ram.md
+    - Min/Max Statistics: ecu-control/ecu-memory/min-max-statistics.md
+    - Read Ram: ecu-control/ecu-memory/read-ram.md
+    - Read RAM Properties - General: ecu-control/ecu-memory/read-ram-properties-general.md
+  - Data Changes in the ECU:
+    - ecu-control/data-changes-in-the-ecu/index.md
+    - Downloading Data to the ECU: ecu-control/data-changes-in-the-ecu/downloading-data-to-the-ecu.md
+    - Uploading Data from the ECU: ecu-control/data-changes-in-the-ecu/uploading-data-from-the-ecu.md
+    - Undo Data Changes: ecu-control/data-changes-in-the-ecu/undo-data-changes.md
+    - Reset ROM: ecu-control/data-changes-in-the-ecu/reset-rom.md
+  - Unit Status: ecu-control/unit-status.md
+  - ECU Search:
+    - ecu-control/ecu-search/index.md
+    - ECU Search - Program Version: ecu-control/ecu-search/ecu-search-program-version.md
+    - ECU Search - Data Version: ecu-control/ecu-search/ecu-search-data-version.md
+  - ECU Properties:
+    - ecu-control/ecu-properties/index.md
+    - ECU Properties - Controllers: ecu-control/ecu-properties/ecu-properties-controllers.md
+    - ECU Properties - Devices: ecu-control/ecu-properties/ecu-properties-devices.md
+- History Report:
+  - history-report/index.md
+  - History Report - Files: history-report/history-report-files.md
+  - History Report dialog box: history-report/history-report-dialog-box.md
+  - History Report - Summary: history-report/history-report-summary.md
+  - History Report - Chassis Details: history-report/history-report-chassis-details.md
+  - History Report - Engine Details: history-report/history-report-engine-details.md
+  - Engine Details - Time: history-report/engine-details-time.md
+  - Engine Details - Cycles: history-report/engine-details-cycles.md
+  - Engine Details - Auxiliary: history-report/engine-details-auxiliary.md
+  - History Report - Setup: history-report/history-report-setup.md
+- Testbed Operation:
+  - testbed-operation/index.md
+  - Testbed Link: testbed-operation/testbed-link.md
+  - Testbed Message: testbed-operation/testbed-message.md
+  - Testbed Properties:
+    - testbed-operation/testbed-properties/index.md
+    - Testbed Properties - Link: testbed-operation/testbed-properties/testbed-properties-link.md
+    - Testbed Properties - Watchdog: testbed-operation/testbed-properties/testbed-properties-watchdog.md
+    - Testbed Properties - Debug: testbed-operation/testbed-properties/testbed-properties-debug.md
+    - Testbed Properties - Commands: testbed-operation/testbed-properties/testbed-properties-commands.md
+    - Testbed Properties - Translate: testbed-operation/testbed-properties/testbed-properties-translate.md
+  - Puma Commands:
+    - testbed-operation/puma-commands/index.md
+    - Puma Command List: testbed-operation/puma-commands/puma-command-list.md
+    - Puma Commands - Initialisation: testbed-operation/puma-commands/puma-commands-initialisation.md
+    - Puma Commands - Configuration: testbed-operation/puma-commands/puma-commands-configuration.md
+    - Puma Commands - Map Manipulation: testbed-operation/puma-commands/puma-commands-map-manipulation.md
+    - Puma Commands - Scalar Manipulation: testbed-operation/puma-commands/puma-commands-scalar-manipulation.md
+    - Puma Commands - Data Acquisition: testbed-operation/puma-commands/puma-commands-data-acquisition.md
+    - Puma Errors: testbed-operation/puma-commands/puma-errors.md
+- Data Display:
+  - data-display/index.md
+  - Numeric Display:
+    - Numeric: data-display/numeric-display/numeric.md
+    - Big Number: data-display/numeric-display/big-number.md
+  - Bar Graph Display:
+    - Bar Graph: data-display/bar-graph-display/bar-graph.md
+    - Bar Graph - Selecting Parameters: data-display/bar-graph-display/bar-graph-selecting-parameters.md
+    - Bar Graph - Display Limits: data-display/bar-graph-display/bar-graph-display-limits.md
+  - Oscilloscope Display:
+    - Oscilloscope: data-display/oscilloscope-display/oscilloscope.md
+    - Oscilloscope - Plot Area: data-display/oscilloscope-display/oscilloscope-plot-area.md
+    - Oscilloscope - Parameter Info: data-display/oscilloscope-display/oscilloscope-parameter-info.md
+    - System Menu - Oscilloscope: data-display/oscilloscope-display/system-menu-oscilloscope.md
+    - Oscilloscope - Selecting Parameters: data-display/oscilloscope-display/oscilloscope-selecting-parameters.md
+    - Oscilloscope - Extras: data-display/oscilloscope-display/oscilloscope-extras.md
+    - Oscilloscope - Types of Trace: data-display/oscilloscope-display/oscilloscope-types-of-trace.md
+    - Oscilloscope - Trace Limits: data-display/oscilloscope-display/oscilloscope-trace-limits.md
+  - Grid Display:
+    - Grid: data-display/grid-display/grid.md
+    - Grid Window Edit Mode: data-display/grid-display/grid-window-edit-mode.md
+    - System Menu - Grid: data-display/grid-display/system-menu-grid.md
+    - Creating a Grid Window: data-display/grid-display/creating-a-grid-window.md
+    - Selecting Cells: data-display/grid-display/selecting-cells.md
+    - Cell Properties: data-display/grid-display/cell-properties.md
+    - Cell Properties - Contents: data-display/grid-display/cell-properties-contents.md
+    - Cell Properties - Formatting: data-display/grid-display/cell-properties-formatting.md
+    - Insert Columns/Rows: data-display/grid-display/insert-columns-rows.md
+    - Delete Columns/Rows: data-display/grid-display/delete-columns-rows.md
+  - Dial Gauge Display: data-display/dial-gauge-display.md
+  - Signal Sampling Display: data-display/signal-sampling-display.md
+  - Other Displays:
+    - data-display/other-displays/index.md
+    - Errors:
+      - data-display/other-displays/errors/index.md
+      - Error Display: data-display/other-displays/errors/error-display.md
+      - Error Mask: data-display/other-displays/errors/error-mask.md
+      - Deleting Errors: data-display/other-displays/errors/deleting-errors.md
+    - Events:
+      - data-display/other-displays/events/index.md
+      - Event Log: data-display/other-displays/events/event-log.md
+      - System Menu - Events: data-display/other-displays/events/system-menu-events.md
+      - Event Priority: data-display/other-displays/events/event-priority.md
+      - Event Mask: data-display/other-displays/events/event-mask.md
+    - Alarms:
+      - data-display/other-displays/alarms/index.md
+      - Alarm Setup: data-display/other-displays/alarms/alarm-setup.md
+      - Alarm Properties: data-display/other-displays/alarms/alarm-properties.md
+      - Alarm Properties - Trigger: data-display/other-displays/alarms/alarm-properties-trigger.md
+      - Alarm Properties - Action: data-display/other-displays/alarms/alarm-properties-action.md
+      - Alarm Display: data-display/other-displays/alarms/alarm-display.md
+- Data Acquisition:
+  - data-acquisition/index.md
+  - Logging:
+    - data-acquisition/logging/index.md
+    - Logging Memory Allocation: data-acquisition/logging/logging-memory-allocation.md
+    - Sessions and Telemetry: data-acquisition/logging/sessions-and-telemetry.md
+    - Session Details: data-acquisition/logging/session-details.md
+    - Channels: data-acquisition/logging/channels.md
+    - Logging Configuration Files: data-acquisition/logging/logging-configuration-files.md
+    - Loading Configurations: data-acquisition/logging/loading-configurations.md
+    - Live Logging:
+      - data-acquisition/logging/live-logging/index.md
+      - Session tab: data-acquisition/logging/live-logging/session-tab.md
+      - Trigger Timing tab: data-acquisition/logging/live-logging/trigger-timing-tab.md
+      - Trigger Condition tab: data-acquisition/logging/live-logging/trigger-condition-tab.md
+      - Recording: data-acquisition/logging/live-logging/recording.md
+      - Automatic Recording: data-acquisition/logging/live-logging/automatic-recording.md
+    - Remote Logging:
+      - data-acquisition/logging/remote-logging/index.md
+      - Configure Remote Logging dialog box:
+        - Channel Overview tab: data-acquisition/logging/remote-logging/configure-remote-logging-dialog-box/channel-overview-tab.md
+        - Memory end strategy panel: data-acquisition/logging/remote-logging/configure-remote-logging-dialog-box/memory-end-strategy-panel.md
+        - Driver push button panel: data-acquisition/logging/remote-logging/configure-remote-logging-dialog-box/driver-push-button-panel.md
+        - Logging duration and rate: data-acquisition/logging/remote-logging/configure-remote-logging-dialog-box/logging-duration-and-rate.md
+        - Channel Properties and Configuration: data-acquisition/logging/remote-logging/configure-remote-logging-dialog-box/channel-properties-and-configuration.md
+      - Duration: data-acquisition/logging/remote-logging/duration.md
+      - Channel Trigger: data-acquisition/logging/remote-logging/channel-trigger.md
+      - Arrange Channels: data-acquisition/logging/remote-logging/arrange-channels.md
+      - Synchro Pattern: data-acquisition/logging/remote-logging/synchro-pattern.md
+    - Burst Logging:
+      - data-acquisition/logging/burst-logging/index.md
+      - Burst Logging - Export: data-acquisition/logging/burst-logging/burst-logging-export.md
+      - Burst Logging - Parameters tab: data-acquisition/logging/burst-logging/burst-logging-parameters-tab.md
+      - Burst Logging - Triggers tab: data-acquisition/logging/burst-logging/burst-logging-triggers-tab.md
+      - Burst Logging - Session tab: data-acquisition/logging/burst-logging/burst-logging-session-tab.md
+      - Burst Logging - Blocks: data-acquisition/logging/burst-logging/burst-logging-blocks.md
+      - Burst Logging - Intervals: data-acquisition/logging/burst-logging/burst-logging-intervals.md
+    - Remote Configuration Compare:
+      - data-acquisition/logging/remote-configuration-compare/index.md
+      - Config Tab: data-acquisition/logging/remote-configuration-compare/config-tab.md
+      - Triggers Tab: data-acquisition/logging/remote-configuration-compare/triggers-tab.md
+    - CAN Configuration:
+      - CAN Configuration Dialog Box:
+        - data-acquisition/logging/can-configuration/can-configuration-dialog-box/index.md
+        - Bus: data-acquisition/logging/can-configuration/can-configuration-dialog-box/bus.md
+        - Buffers: data-acquisition/logging/can-configuration/can-configuration-dialog-box/buffers.md
+        - Messages: data-acquisition/logging/can-configuration/can-configuration-dialog-box/messages.md
+        - Message Details: data-acquisition/logging/can-configuration/can-configuration-dialog-box/message-details.md
+        - Parameter Details: data-acquisition/logging/can-configuration/can-configuration-dialog-box/parameter-details.md
+      - CAN Bit Definitions: data-acquisition/logging/can-configuration/can-bit-definitions.md
+      - CAN Parameters: data-acquisition/logging/can-configuration/can-parameters.md
+      - Import/Export Buffers and Messages: data-acquisition/logging/can-configuration/import-export-buffers-and-messages.md
+  - Sensors:
+    - data-acquisition/sensors/index.md
+    - Software Calibrated Sensors:
+      - data-acquisition/sensors/software-calibrated-sensors/index.md
+      - Calibration Files: data-acquisition/sensors/software-calibrated-sensors/calibration-files.md
+      - Sensor Calibration Tool: data-acquisition/sensors/software-calibrated-sensors/sensor-calibration-tool.md
+      - Live Calibration: data-acquisition/sensors/software-calibrated-sensors/live-calibration.md
+    - Obtaining Sensor Calibration Data:
+      - data-acquisition/sensors/obtaining-sensor-calibration-data/index.md
+    - Sensors & Actuators:
+      - data-acquisition/sensors/sensors-and-actuators/index.md
+      - Sensor Sets: data-acquisition/sensors/sensors-and-actuators/sensor-sets.md
+      - Sensors & Actuators dialog box: data-acquisition/sensors/sensors-and-actuators/sensors-and-actuators-dialog-box.md
+      - Sensors & Actuators - Serial Numbers: data-acquisition/sensors/sensors-and-actuators/sensors-and-actuators-serial-numbers.md
+      - Sensor and Actuator Constants: data-acquisition/sensors/sensors-and-actuators/sensor-and-actuator-constants.md
+      - Enabling and Disabling Sensors and Actuators: data-acquisition/sensors/sensors-and-actuators/enabling-and-disabling-sensors-and-actuators.md
+    - External Inputs:
+      - External Inputs Configuration: data-acquisition/sensors/external-inputs/external-inputs-configuration.md
+      - External Inputs - Input Source: data-acquisition/sensors/external-inputs/external-inputs-input-source.md
+      - External Inputs - Selecting a Bus: data-acquisition/sensors/external-inputs/external-inputs-selecting-a-bus.md
+      - External Inputs - Selecting a Node: data-acquisition/sensors/external-inputs/external-inputs-selecting-a-node.md
+      - External Inputs - Adding a Sensor: data-acquisition/sensors/external-inputs/external-inputs-adding-a-sensor.md
+      - External Inputs - SN-6 Interface Cards: data-acquisition/sensors/external-inputs/external-inputs-sn-6-interface-cards.md
+      - External Inputs - Drag and Drop: data-acquisition/sensors/external-inputs/external-inputs-drag-and-drop.md
+      - External Inputs - Speed Sensor Scaling: data-acquisition/sensors/external-inputs/external-inputs-speed-sensor-scaling.md
+      - Input Signal Configuration Tool: data-acquisition/sensors/external-inputs/input-signal-configuration-tool.md
+- PCU Dashboard Configuration:
+  - PCU-400 Display Unit: pcu-dashboard-configuration/pcu-400-display-unit.md
+  - Requirements: pcu-dashboard-configuration/requirements.md
+  - PCU Dasbboard Window:
+    - PCU Dashboard Config Window: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dashboard-config-window.md
+    - Import and Export the config: pcu-dashboard-configuration/pcu-dasbboard-window/import-and-export-the-config.md
+    - Dash Configuration Main menu: pcu-dashboard-configuration/pcu-dasbboard-window/dash-configuration-main-menu.md
+    - PCU Context Menus: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-context-menus.md
+    - PCU Dash Properties:
+      - pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/index.md
+      - Display tab: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/display-tab.md
+      - Shift Lights tab: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/shift-lights-tab.md
+      - Actions tab: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/actions-tab.md
+      - Actions: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/actions.md
+      - Layout tab: pcu-dashboard-configuration/pcu-dasbboard-window/pcu-dash-properties/layout-tab.md
+    - Display Control Types:
+      - Numeric Control: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/numeric-control.md
+      - Bar Graph Control: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/bar-graph-control.md
+      - Rev Bar Control: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/rev-bar-control.md
+      - Dial Control: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/dial-control.md
+      - LED Control: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/led-control.md
+      - Static Labels: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/static-labels.md
+      - Size and Move Display Controls: pcu-dashboard-configuration/pcu-dasbboard-window/display-control-types/size-and-move-display-controls.md
+  - Create a PCU Dashboard Config: pcu-dashboard-configuration/create-a-pcu-dashboard-config.md
+  - Assign Actions to push buttons: pcu-dashboard-configuration/assign-actions-to-push-buttons.md
+- Developer Functions:
+  - developer-functions/index.md
+  - Diagnostics: developer-functions/diagnostics.md
+  - System Log: developer-functions/system-log.md
+  - Error Messages: developer-functions/error-messages.md
+  - Productivity Tools:
+    - developer-functions/productivity-tools/index.md
+    - Custom Menus: developer-functions/productivity-tools/custom-menus.md
+    - Macros: developer-functions/productivity-tools/macros.md
+- ActiveX Automation:
+  - activex-automation/index.md
+  - Accessing ActiveX Functions: activex-automation/accessing-activex-functions.md
+  - ActiveX Client Languages:
+    - activex-automation/activex-client-languages/index.md
+    - SM Script: activex-automation/activex-client-languages/sm-script.md
+    - Visual C++: activex-automation/activex-client-languages/visual-cpp.md
+    - Visual Basic: activex-automation/activex-client-languages/visual-basic.md
+  - ActiveX Methods:
+    - activex-automation/activex-methods/index.md
+    - ECU Control: activex-automation/activex-methods/ecu-control.md
+    - Project Management: activex-automation/activex-methods/project-management.md
+    - Data Acquisition: activex-automation/activex-methods/data-acquisition.md
+    - Parameters: activex-automation/activex-methods/parameters.md
+    - Conversion Rules: activex-automation/activex-methods/conversion-rules.md
+  - ActiveX Errors:
+    - activex-automation/activex-errors/index.md
+    - ActiveX Error Codes: activex-automation/activex-errors/activex-error-codes.md
+  - ActiveX Examples:
+    - activex-automation/activex-examples/index.md
+    - ActiveX Example 1: activex-automation/activex-examples/activex-example-1.md
+    - ActiveX Example 2: activex-automation/activex-examples/activex-example-2.md
+    - ActiveX Example 3: activex-automation/activex-examples/activex-example-3.md
+    - ActiveX Example 4: activex-automation/activex-examples/activex-example-4.md
+    - ActiveX Example 5: activex-automation/activex-examples/activex-example-5.md
+  - System Registered Handles:
+    - Exit Event: activex-automation/system-registered-handles/exit-event.md
+    - Detect SM VisC++: activex-automation/system-registered-handles/detect-sm-viscpp.md
+    - Detect SM VisBasic: activex-automation/system-registered-handles/detect-sm-visbasic.md
+- Configuration API:
+  - configuration-api/index.md
+  - Configuration API Setup: configuration-api/configuration-api-setup.md
+  - Protocol Documentation: configuration-api/protocol-documentation.md
+  - Protobuf Definitions: https://github.com/mat-docs/System.Monitor.Configuration.API.Client.Sample/tree/main/Protos
+  - Client Example: https://github.com/mat-docs/System.Monitor.Configuration.API.Client.Sample/tree/main
+- Hardware:
+  - PC System Requirements: hardware/pc-system-requirements.md
+  - Communication Architecture: hardware/communication-architecture.md
+  - Communication Architecture - Layers: hardware/communication-architecture-layers.md
+  - Communication Adaptor (CA-Card): hardware/communication-adaptor-ca-card.md
+  - Sensor Bus: hardware/sensor-bus.md
+  - Sensor Node SN-6: hardware/sensor-node-sn-6.md
+  - Sensor Node SN-32: hardware/sensor-node-sn-32.md
+  - CAN Link: hardware/can-link.md
+  - Adjustment Board: hardware/adjustment-board.md
+- Technical Support:
+  - ATLAS: technical-support/atlas.md
+  - Technical Support: technical-support/technical-support.md
+  - Motion Applied: technical-support/motion-applied.md
+- Release Notes:
+  - blog/index.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - codehilite
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - def_list
+  - footnotes
+  - toc:
+      permalink: "#"
+  - meta
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mat-docs/
+    - icon: fontawesome/brands/linkedin
+      link: https://uk.linkedin.com/company/motionapplied
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:sales@motionapplied.com
+  tags:
+    prototype: prototype
+  generator: false
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! 
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognise your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: true
+
+plugins:
+  - search
+  - tags
+  - blog
+
+hooks:
+  - hooks/llms_txt.py

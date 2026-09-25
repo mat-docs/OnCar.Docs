@@ -1,0 +1,14 @@
+# Puma Commands - Data Acquisition
+
+The Data Acquisition commands are available in both Measurement and Full-operation modes.
+
+| System Monitor command | PUMA command | Function |
+|---|---|---|
+| Select Parameters for Acquisition | Parameter for Value Acquisition | Allows PUMA to specify the parameters it will request with the **Acquire Parameters** command. May be issued while switched offline or online. <br>PUMA sends: <br>- a LUN (must always be 1) <br>- a sampling rate <br>- a list of measurement parameter identifiers. <br>More than one **Select Parameters for Acquisition** can be issued by PUMA; each list is appended to the previously selected parameters. To deselect all the parameters, PUMA sends an empty list. <br>The total number of parameters selected since **Init** appears in the **Params** field of the [Testbed Message](../testbed-message.md) window. The sample rate specified in the most recent command is shown in the **Rate** field. This is only an indication of the rate at which PUMA sends **Acquire Parameters** commands; System Monitor does not send values to PUMA without receiving such a command. <br>If a parameter is not a measurement parameter in the Project's system description, System Monitor replies with an *error during execution* [Error Message](puma-errors.md) ("Invalid parameter"). |
+| Switch Offline/Online | Switching Offline/Online | PUMA sends a mode, which is one of: <br>- offline <br>- online. <br>**Online** switches [Live Tune](../../tuning/live-tune.md) on, so changes made to the [Edit Buffer](../../project-management/developing-data-versions/index.md) by PUMA are downloaded to the ECU as they are made, and **Acquire Parameters** commands are accepted. <br>**Offline** switches Live Tune off, so changes made by PUMA affect the Edit Buffer only, and **Acquire Parameters** commands are rejected. <br>After **Init**, the online/offline state follows whether Live Tune is on. |
+| Acquire Parameters | Get On-line Value | A request from PUMA for System Monitor to supply the current values of the parameters selected by the preceding **Select Parameters for Acquisition** commands. <br>System Monitor returns: <br>- a list of parameter values, in the same order as the list. <br>If currently switched offline, System Monitor replies with an *error during execution* [Error Message](puma-errors.md) ("Not online"). |
+
+The values sent to PUMA are the latest values that System Monitor has acquired from the ECU. The parameters that System Monitor acquires are defined in the [Live Logging Configuration](../../data-acquisition/logging/live-logging/index.md); see [Testbed Link](../testbed-link.md).
+
+!!! warning
+    If PUMA makes changes to the Edit Buffer while switched offline, those changes are not downloaded to the ECU, so the ECU and the Edit Buffer no longer match.

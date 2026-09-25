@@ -1,0 +1,6 @@
+# Puma Commands - Initialisation
+
+| System Monitor command | PUMA command | Function |
+|---|---|---|
+| Init | Init | Sent by PUMA to initialise System Monitor for a PUMA tuning session. System Monitor ignores all other commands until it has received **Init**. When received, System Monitor: <br>- resets the link, clearing any parameters and maps selected previously and the embedded data file name <br>- resets the **Bytes**, **Params**, **Rate** and **Last Error** fields in the [Testbed Message](../testbed-message.md) window <br>- replies to PUMA. <br>The [Watchdog](../testbed-properties/testbed-properties-watchdog.md) and the [Debug File](../testbed-properties/testbed-properties-debug.md) are started when the Testbed Link is enabled. |
+| Identify | Identify | Sent by PUMA after **Init** to indicate the version of the PUMA protocol it uses and to identify itself with a name. <br>If the version is V2.0 or later, System Monitor replies that it supports V2.0 and identifies itself as *System Monitor*. <br>If the version is earlier than V2.0, System Monitor replies with an *error during execution* [Error Message](puma-errors.md) ("This version of Puma is not supported"). <br>Until a successful **Identify** has been received, System Monitor replies to all other commands (including a repeated **Init**) with *command not executed*. |
